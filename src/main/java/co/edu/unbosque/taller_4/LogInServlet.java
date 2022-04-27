@@ -4,8 +4,8 @@ package co.edu.unbosque.taller_4;
 import java.io.*;
 import java.util.List;
 
-import co.edu.unbosque.taller_3.DTO.User;
-import co.edu.unbosque.taller_3.services.UserService;
+import co.edu.unbosque.taller_4.DTO.User;
+import co.edu.unbosque.taller_4.services.UserService;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
