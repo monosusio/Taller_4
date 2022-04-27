@@ -1,7 +1,6 @@
 package co.edu.unbosque.taller_4.services;
 
 import co.edu.unbosque.taller_4.DTO.User;
-import co.edu.unbosque.taller_4.DTO.User;
 import com.opencsv.bean.*;
 
 import java.io.*;
@@ -35,10 +34,12 @@ public class UserService {
         return users;
     }
 
-    public void createUser(String username, String password, String role, String path) throws IOException {
+    public User createUser(String username, String password, String role, String path) throws IOException {
         String newLine = "\n" + username + "," + password + "," + role;
         FileOutputStream os = new FileOutputStream(path + "WEB-INF/classes/" + "users.csv", true);
         os.write(newLine.getBytes());
         os.close();
+
+        return new User(username, password, role);
     }
 }
