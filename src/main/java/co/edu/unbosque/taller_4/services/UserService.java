@@ -10,9 +10,7 @@ import java.util.List;
 public class UserService {
 
     public List<User> getUsers() throws IOException {
-
         List<User> users;
-
         try (InputStream is = UserService.class.getClassLoader()
                 .getResourceAsStream("users.csv")) {
 

@@ -88,7 +88,6 @@ public class UsersResource {
             @FormParam("role") String role
     ) {
         String contextPath =context.getRealPath("") + File.separator;
-
         try {
             User user = new UserService().createUser(username, password, role, contextPath);
 
@@ -100,4 +99,3 @@ public class UsersResource {
         }
     }
 }
-
